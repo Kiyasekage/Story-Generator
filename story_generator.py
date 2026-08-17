@@ -1,12 +1,10 @@
 def combine(p_ans):
-    lists = []
     question = ["why","what"]
     words = p_ans.lower().split()
-    if words[0] and words in question:
-        lists.append(f"{ans}?")
+    if words[0] in question:
+        return f"{ans}?"
     else:
-        lists.append(f"{ans}.")
-    return lists
+        return f"{ans}."
 print("Welcome to combining your input using the story generator!")
 com_list = []
 status = int(input("How many lines do you want to add? "))
@@ -15,6 +13,7 @@ while i<status:
     ans = input("input : ")
     com_list.append(combine(ans))
     i+=1
-
+com_list = " ".join(com_list)
+print(com_list)
     
 
